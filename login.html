@@ -21,7 +21,7 @@
         <!-- 默认的登录页面 -->
         <div class="login-box">
             <!-- 登录页面表单 -->
-            <form class="layui-form" action="">
+            <form class="layui-form" id="form_login">
                 <!-- 用户名 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-username"></i>
@@ -43,7 +43,7 @@
 
         <!-- 点击注册后的显示页面-->
         <div class="reg-box">
-            <form class="layui-form" action="">
+            <form class="layui-form" id="form_reg">
                 <!-- 用户名 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-username"></i>
@@ -52,13 +52,13 @@
                 </div>
                 <!-- 密码 -->
                 <div class="layui-form-item">
-                    <i class="layui-icon layui-icon-password                    "></i>
+                    <i class="layui-icon layui-icon-password"></i>
                     <input type="password" name="password" required lay-verify="required|pwd" placeholder="请输入密码"
                         autocomplete="off" class="layui-input">
                 </div>
                 <!-- 确认密码 -->
                 <div class="layui-form-item">
-                    <i class="layui-icon layui-icon-password                    "></i>
+                    <i class="layui-icon layui-icon-password"></i>
                     <input type="password" name="repassword" required lay-verify="required|pwd|repwd"
                         placeholder="请再次确认密码" autocomplete="off" class="layui-input">
                 </div>
@@ -73,6 +73,8 @@
     <script src="/assets/lib/layui/layui.all.js"></script>
     <!-- 绑定jquery -->
     <script src="/assets/lib/jquery.js"></script>
+    <!--导入自己的baseAPI.js ,因为这个方法依赖于jQuery，且需要后续通过login.js实时修改数据，必须引入在jQuery之后和login.js之前-->
+    <script src="/assets/js/baseAPI.js"></script>
     <!-- 绑定自己的JS -->
     <script src="/assets/js/login.js"></script>
 </body>
